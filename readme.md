@@ -42,7 +42,7 @@ BaseURL: https://dev.svested.com/interview/api
 
 ## Task 2 - Create React Frontend
 
-Using React, create a signup screen and a home screen. The signup screen should consume _POST /signup endpoint_. The home screen should have a button that calls endpoint _POST /process_ to start processing some data in the backend upon click. Then, another button that calls endpoint _GET /fetch_ to retrieve the processed data. 
+Using React, create a signup screen and a home screen. The signup screen should consume _POST /signup endpoint_. The home screen should have a button that calls endpoint _POST /process_ (requires standard authorization header) to start processing some data in the backend upon click. Then, another button that calls endpoint _GET /fetch_ to retrieve the processed data. 
 
 _GET /fetch_ endpoint would return an array of objects that look like this:
 
@@ -61,6 +61,8 @@ _GET /fetch_ endpoint would return an array of objects that look like this:
 ```
 
 For every object in the array received in the response body, render a square element with the value of property `randAlphabet` displayed in it using a grid layout on the home screen.
+
+BaseURL: https://dev.svested.com/interview/api
 
 ---
 
