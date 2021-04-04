@@ -15,7 +15,7 @@ To give you an overview, you will be working on these tasks:
 3. Push it to a public GIT repository.
 4. Setup CICD.
 
-Complete the respective tasks based on the role you are applying for.
+Complete the respective tasks with minimal effort based on the role you are applying for. 
 
 | Role                 | Requirements                                                                                                                       |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------- |
@@ -34,7 +34,7 @@ Using Node.js, express and sequelize (sqlite), accomplish the following HTTP con
 | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | /signup  | POST   | Takes in email and password. Returns a JWT Token for authorization                                                                                          |
 | /process | POST   | Validate JWT token in the header. Process ./data/data.json file by inserting records into database using sequelize (ORM) where randAlphabet is 'a' and 'b'. This endpoint verify JWT Token in the HTTP Header 'Authoriszation Bearer <JWT Token>'. |
-| /fetch   | GET    | Fetch the persisted data and return them as HTTP Response Body. This endpoint verify JWT Token in the HTTP Header 'Authorization Bearer <JWT Token>'.                                                                                            |
+| /fetch   | GET    | Fetch the persisted data and return them as HTTP Response Body.                                                                                            |
 
 ---
 
