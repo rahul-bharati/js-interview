@@ -63,6 +63,8 @@ _GET /fetch_ endpoint would return an array of objects that look like this:
 For every object in the array received in the response body, render a square element with the value of property `randAlphabet` displayed in it using a grid layout on the home screen.
 
 BaseURL: https://dev.svested.com/interview/api
+    
+In achieving the above mentioned use cases, try to demonstrate container & representational component separation to achieve component reusability effect. You are encouraged to demonstrate your knowledge on React and its best practices. 
 
 ---
 
