@@ -30,7 +30,7 @@ Complete the respective tasks with minimal effort based on the role you are appl
 
 Using Node.js, express and sequelize (sqlite), accomplish the following HTTP contract. Please fork this repository and work on it.
 
-BaseURL: https://dev.svested.com/interview/api
+You may show your understanding of how a production Node.js application should be. Use TDD approach if possible.
 
 | Path     | Method | Description                                                                                                                                                 |
 | -------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
