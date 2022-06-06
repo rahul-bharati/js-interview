@@ -1,5 +1,7 @@
 const { validateEmail } = require("../utils/validators");
 const jwt = require("jsonwebtoken");
+const dataToImport = require("../data/data.json");
+const Data = require("../models/data");
 
 const { JWT_SECRET } = process.env;
 
@@ -24,8 +26,25 @@ const signup = async (req, res) => {
 const processData = async (req, res) => {
   try {
     const bearerToken = req.headers.authorization.split(" ")[1];
-    console.log({ bearerToken });
-    res.status(200).send({});
+    if (!bearerToken) throw new Error("Authorization token not found");
+    await Data.bulkCreate(dataToImport);
+    res.status(200).send({
+      status: "success",
+      message: "File processed",
+    });
+  } catch (error) {
+    console.log("Error Occured: ", error);
+    res.status(400).send({ status: "failed", error });
+  }
+};
+
+const fetchData = async (req, res) => {
+  try {
+    const data = await Data.findAll();
+    res.status(200).send({
+      status: "success",
+      data,
+    });
   } catch (error) {
     console.log("Error Occured: ", error);
     res.status(400).send({ status: "failed", error });
@@ -35,4 +54,5 @@ const processData = async (req, res) => {
 module.exports = {
   signup,
   processData,
+  fetchData,
 };

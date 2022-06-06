@@ -1,6 +1,6 @@
-const { Sequelize, Model, DataTypes } = require("sequelize");
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../utils/db");
 
-const sequelize = new Sequelize("sqlite::memory:");
 const Data = sequelize.define("Data", {
   id: { type: DataTypes.NUMBER, primaryKey: true },
   randAlphabet: DataTypes.CHAR,
