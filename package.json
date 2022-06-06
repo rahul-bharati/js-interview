@@ -4,15 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon index.js"
+    "start": "nodemon index.js",
+    "test": "jest --detectOpenHandles"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "jest": "^28.1.0",
     "jsonwebtoken": "^8.5.1",
     "sequelize": "^6.20.1",
-    "sqlite3": "^5.0.8"
+    "sqlite3": "^5.0.8",
+    "supertest": "^6.2.3"
   },
   "devDependencies": {
     "nodemon": "^2.0.16"
