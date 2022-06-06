@@ -21,6 +21,18 @@ const signup = async (req, res) => {
   }
 };
 
+const processData = async (req, res) => {
+  try {
+    const bearerToken = req.headers.authorization.split(" ")[1];
+    console.log({ bearerToken });
+    res.status(200).send({});
+  } catch (error) {
+    console.log("Error Occured: ", error);
+    res.status(400).send({ status: "failed", error });
+  }
+};
+
 module.exports = {
   signup,
+  processData,
 };

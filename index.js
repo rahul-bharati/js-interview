@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const { signup } = require("./controllers/api");
+const { signup, processData } = require("./controllers/api");
 const app = express();
 const port = 3000;
 
@@ -11,7 +11,9 @@ app.get("/", (req, res) => {
 });
 
 app.post("/signup", signup);
+app.post("/process", processData);
+// app.listen(port, () => {
+//   console.log(`Example app listening on port ${port}`);
+// })
 
-module.exports = app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`);
-});
+module.exports = app;
